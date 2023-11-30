@@ -25,10 +25,15 @@ public class BaseClass {
 
 	}
 
+	public void teadDown() {
+
+		driver.quit();
+
+	}
+
 	public void implicitWait() {
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
-
 }
