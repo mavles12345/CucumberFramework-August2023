@@ -7,20 +7,28 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class BaseClass {
 	
 	
-	
+	WebDriver driver;
 	
 	public void initializeBrowser(String Browser) {
 		
 		if(Browser.equals("Chrome")) {
 			
-			WebDriver driver=new ChromeDriver();		
+			driver=new ChromeDriver();		
 		
 		}else if(Browser.equals("FireFox")) {
 			
-			WebDriver driver=new FirefoxDriver();
+			driver=new FirefoxDriver();
 			
 		}
 		
+		
+		
+
+	}
+	
+	public void teadDown() {
+		
+		driver.quit();
 
 	}
 
